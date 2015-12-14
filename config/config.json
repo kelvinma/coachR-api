@@ -1,0 +1,19 @@
+{
+  "development": {
+    "database": "coach_r",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false,
+    "allow_origin": "http://localhost:4200"
+  },
+  "test": {
+    "database": "coach_r",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "allow_origin": "http://localhost:4200"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "allow_origin": "http://example.com"
+  }
+}
