@@ -6,8 +6,8 @@ module.exports = function(req, res, render) {
     }
   })
   .then(function(athlete) {
-    athlete.firstName = req.body.athlete.firstName;
-    athlete.lastName = req.body.athlete.lastName;
+    athlete.first_name = req.body.athlete.firstName;
+    athlete.last_name = req.body.athlete.lastName;
     athlete.gender = req.body.athlete.gender;
     athlete.updatedAt = new Date().getTime();
     /*

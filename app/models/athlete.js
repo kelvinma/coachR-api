@@ -4,8 +4,8 @@ var ssaclAttributeRoles = require('ssacl-attribute-roles');
 
 module.exports = function(sequelize, DataTypes) {
   var Athlete = sequelize.define('athletes', {
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
+    firstname: DataTypes.STRING,
+    lastname: DataTypes.STRING,
     gender: DataTypes.STRING
 
   }, {
@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
 
     classMethods: {
       associate: function(models) {
-        models.athlete.hasMany(models.workout);
+        Athlete.hasMany(models.workout);
       }
     },
 

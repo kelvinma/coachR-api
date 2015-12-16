@@ -5,12 +5,10 @@ var ssaclAttributeRoles = require('ssacl-attribute-roles');
 module.exports = function(sequelize, DataTypes) {
   var Workout = sequelize.define('workouts', {
     title: DataTypes.STRING,
-    date: DataTypes.DATE,
+    date: DataTypes.STRING,
     type: DataTypes.STRING,
-    duration: DataTypes.INTEGER,
+    duration: DataTypes.FLOAT,
     distance: DataTypes.FLOAT,
-    reps: DataTypes.INTEGER,
-    newPR: DataTypes.BOOLEAN,
     notes: DataTypes.TEXT
   }, {
     getterMethods: {
