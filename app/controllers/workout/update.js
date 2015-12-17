@@ -7,14 +7,14 @@ module.exports = function(req, res, render) {
   })
   .then(function(workout) {
     console.log(req.body.workout);
-    workout.title = req.body.workout.title;
-    workout.date = req.body.workout.date;
-    workout.type = req.body.workout.type;
-    workout.duration = req.body.workout.duration;
-    workout.distance = req.body.workout.distance;
-    workout.notes = req.body.workout.notes;
+    workout.title = req.body.title;
+    workout.date = req.body.date;
+    workout.type = req.body.type;
+    workout.duration = req.body.duration;
+    workout.distance = req.body.distance;
+    workout.notes = req.body.notes;
     workout.updatedAt = new Date().getTime();
-    workout.athlete_id = req.body.workout.athlete;
+    workout.athlete_id = req.body.athlete;
     /*
      * Set new values like this:
      * workout.some_field_name = req.body.workout.someFieldName;
