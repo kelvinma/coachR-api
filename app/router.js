@@ -8,6 +8,10 @@ module.exports = function(app) {
     .get(controllers.workout.list)
     .post(controllers.workout.add);
   app.route('/workouts/:workout_id')
+    .options(function(req, res, next){
+      res.status(200).end();
+      next();
+    })
     .get(controllers.workout.load)
     .put(controllers.workout.update)
     .delete(controllers.workout.remove);

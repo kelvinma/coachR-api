@@ -6,17 +6,15 @@ module.exports = function(req, res, render) {
     }
   })
   .then(function(workout) {
-
+    console.log(req.body.workout);
     workout.title = req.body.workout.title;
     workout.date = req.body.workout.date;
     workout.type = req.body.workout.type;
     workout.duration = req.body.workout.duration;
     workout.distance = req.body.workout.distance;
-    workout.reps = req.body.workout.reps;
-    workout.new_pr = req.body.workout.newPR;
     workout.notes = req.body.workout.notes;
     workout.updatedAt = new Date().getTime();
-    workout.athlete_id = req.body.workout.athlete_id;
+    workout.athlete_id = req.body.workout.athlete;
     /*
      * Set new values like this:
      * workout.some_field_name = req.body.workout.someFieldName;

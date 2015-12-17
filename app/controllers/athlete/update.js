@@ -18,6 +18,7 @@ module.exports = function(req, res, render) {
     return athlete.save();
   })
   .then(function(athlete) {
+    // console.log(athlete);
     render(athlete);
   })
   .catch(function(err) {
